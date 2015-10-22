@@ -3,6 +3,8 @@
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
+![Ordering Pizza Image](https://cloud.githubusercontent.com/assets/5218249/10678653/bcab089e-78e1-11e5-9a84-3570d524fb00.png)
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
