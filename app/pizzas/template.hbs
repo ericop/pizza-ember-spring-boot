@@ -1,0 +1,27 @@
+<h3> Past Orders </h3>
+{{#each model as |pizza|}}
+    {{#mdl-card title=pizza.toppings}}
+      <div class="mdl-card__supporting-text">
+          <h5>Size: {{pizza.size}} inch</h5>
+          <h5>Toppings: {{pizza.toppings}}</h5>
+          Order Numer: {{pizza.id}}
+      </div>
+      {{#mdl-card-actions}}
+        {{#link-to 'pizza' pizza.id}}
+            {{mdl-button text='View Details'}}
+        {{/link-to}}
+      {{/mdl-card-actions}}
+      {{#mdl-card-buttons}}
+        {{#link-to 'pizza' pizza.id}}
+            {{mdl-button icon='exit_to_app'}}
+        {{/link-to}}
+      {{/mdl-card-buttons}}
+      {{/mdl-card}} <br>
+{{/each}}
+
+<br>
+<div>
+    {{#link-to 'new-pizza'}}
+      {{mdl-button isRaised=true text='Place New Orders'}}
+    {{/link-to}}
+</div>

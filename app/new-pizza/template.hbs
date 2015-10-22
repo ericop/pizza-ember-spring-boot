@@ -1,0 +1,20 @@
+<div>
+    {{mdl-textfield label='Pizza diameter (inches)' value=model.size pattern="[1]{0,1}[0,2,4]{0,1}[8]{0,1}" errorMessage="Sizes include 8,10,12 & 14. No spaces or non-number please."}}
+    <section>
+        <h5> Toppings</h5>
+        <p>{{multiselect-checkboxes options=toppings selection=model.toppings}}</p>
+        <p><h5>Selected toppings:</h5>
+            {{#each model.toppings as |topping|}}
+              {{topping}} {{mdl-icon icon='done'}}
+            {{/each}}
+        </p>
+    </section>
+</div>
+<div>
+    {{#if (and model.size model.toppings)}}
+      <button class='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised mdl-button--colored' {{action 'saveOrder'}}>Place Order </button>
+    {{else}}
+      {{mdl-button isRaised=true text='Place Order' disabled=true}}
+    {{/if}}
+  </div>
+{{outlet}}

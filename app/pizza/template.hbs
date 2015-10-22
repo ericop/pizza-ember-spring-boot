@@ -1,0 +1,13 @@
+    {{#mdl-card title=model.toppings}}
+      <div class="mdl-card__supporting-text">
+        <h3> Completed Order {{mdl-icon icon='shopping_cart'}}</h3>
+          Order Numer: {{model.id}}
+          <h5>Size: {{model.size}} inch</h5>
+          <h5>Toppings: {{model.toppings}}</h5>
+      </div>
+      {{#mdl-card-actions}}
+        {{#link-to 'pizzas'}}
+            {{mdl-button text='Back to Past Orders' isAccent=true}}
+        {{/link-to}}
+      {{/mdl-card-actions}}
+    {{/mdl-card}}

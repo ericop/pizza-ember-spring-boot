@@ -6,6 +6,7 @@ module.exports = function(defaults) {
     // Add options here
   });
 
+  app.import(app.bowerDirectory + '/material-design-lite/material.css');
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
