@@ -1,4 +1,3 @@
-import DS from 'ember-data';
 import Ember from 'ember';
 import HalSerializer from "ember-data-hal-9000/serializer";
 
